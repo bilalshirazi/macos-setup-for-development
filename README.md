@@ -4,31 +4,35 @@ A simple checklist to get a macOS machine ready for development.
 
 ## OS/User Accounts
 
-- Complete macOS Setup Assistant and create a local user. [Create local user on OS setup](https://support.apple.com/en-ca/guide/mac-help/mh15191/mac)
+- Complete macOS Setup Assistant and create a local user: [Create a user account on Mac](https://support.apple.com/en-ca/guide/mac-help/mh15191/mac)
 - Install all available macOS updates: [Update macOS on Mac](https://support.apple.com/108382)
 
- ## Terminal + shell profile
+## Terminal + shell profile
 
 - We’ll be using **Terminal** for most setup steps: [Terminal User Guide](https://support.apple.com/en-ca/guide/terminal/welcome/mac)
-- Some installs (e.g. Homebrew) require adding commands to your shell profile so tools are available on your `PATH`. On macOS (zsh), that’s typically `~/.zprofile`.
-  - What a shell profile file is: [Mac startup disk / shell startup files overview](https://support.apple.com/en-ca/102360)
-  - View your current profile: `cat ~/.zprofile`
-  - Edit it (simple option): `nano ~/.zprofile`
+- Some installs (e.g. Homebrew) require updating your shell profile so tools are available on your `PATH`. On macOS (zsh), that’s typically `~/.zprofile`.
+  - Overview: [Mac startup disk / shell startup files overview](https://support.apple.com/en-ca/102360)
+  - View: `cat ~/.zprofile`
+  - Edit (simple option): `nano ~/.zprofile`
 
 ## Tooling
 
 - Install Homebrew (this also installs Xcode Command Line Tools if missing):
-  - Install script: ` /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
-  - Homebrew homepage: [brew.sh](https://brew.sh)
-  - Homebrew GitHub: [homebrew/brew](https://github.com/homebrew/brew)
-  - Xcode Command Line Tools docs: [Installing the Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/)
-- Open **Terminal** (Applications → Utilities → Terminal): [Terminal User Guide](https://support.apple.com/en-ca/guide/terminal/welcome/mac)
-- Add Homebrew to your `PATH` (so `brew` works in new shells). **Run these commands in Terminal**:
+  - Install: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+  - Homebrew: [brew.sh](https://brew.sh) · [homebrew/brew](https://github.com/homebrew/brew)
+  - Xcode Command Line Tools: [Installing the Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/)
+- Add Homebrew to your `PATH` (so `brew` works in new shells). Run the “Next steps” commands Homebrew prints, typically:
   - `echo >> ~/.zprofile`
   - `echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile`
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
+
+## Python 
+
+- We install our own Python so we can control versions and avoid relying on whatever ships with macOS: [Python on macOS](https://www.python.org/downloads/macos/)
+- macOS includes an Apple-provided Python (`/usr/bin/python3`) that some system tools may depend on, so we **don’t modify or replace it**.
+- Instead, we install and manage a separate Python for development (and keep it isolated from the system Python).
 ## Python tooling (uv)
 
 - Install `uv` with Homebrew: `brew install uv`

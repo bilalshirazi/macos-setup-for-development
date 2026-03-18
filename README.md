@@ -1,45 +1,36 @@
 # macos-setup-for-development
 
-A step-by-step checklist for setting up (and maintaining) macOS for development.
+A simple checklist to get a macOS machine ready for development.
 
-## Setup (order of operations)
+## Base (done)
 
-### 1) First boot + local user
-- Complete the macOS setup assistant and create a local user account.
+- Complete macOS Setup Assistant and create a local user. [Create local user on OS setup](https://support.apple.com/en-ca/guide/mac-help/mh15191/mac)
+- Install all available macOS updates: [Update macOS on Mac](https://support.apple.com/108382)
 
-### 2) Update macOS
-- Run Software Update and install the latest available updates.
-- Reference: [Update macOS on Mac](https://support.apple.com/en-ca/108382)
+## Homebrew + Xcode Command Line Tools (done)
 
-### 3) (Optional) Enroll in Apple Beta Software Program
-Only do this if you intentionally want beta OS releases on this machine.
-- Reference: [Apple Beta Software Program](https://beta.apple.com)
+- Install Homebrew (this also installs Xcode Command Line Tools if missing):
+  - Install script: ` /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" `
+  - Homebrew homepage: [brew.sh](https://brew.sh)
+  - Homebrew GitHub: [homebrew/brew](https://github.com/homebrew/brew)
+  - Xcode Command Line Tools docs: [Installing the Command Line Tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools/)
 
-### 4) (Optional) Enable Apple Intelligence
-Availability depends on macOS version, region/language, and supported hardware.
-- Reference: [Apple Intelligence](https://www.apple.com/apple-intelligence/)
+- Add Homebrew to your PATH (so `brew` works in new shells):
+  - `echo >> ~/.zprofile`
+  - `echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile`
+  - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"'`
+  - Verify: `brew --version`
 
-### 5) Install Homebrew (package manager)
-Homebrew simplifies installing and keeping CLI tools up to date.
-- Primary site: [brew.sh](https://brew.sh)
-- Source repo: [homebrew/brew](https://github.com/homebrew/brew)
+## Workspace (done)
 
-## Ongoing maintenance
+- Create a dev folder: `mkdir -p ~/Workspace`
 
-### Keep macOS current
-- Check Software Update regularly (especially security updates).
-- If enrolled in beta, expect more frequent updates and occasional breakage.
+## Python (observed)
 
-### Keep Homebrew packages current
-```sh
-brew update
-brew upgrade
-brew cleanup
-brew doctor
-```
+- `python` is not available by default on macOS (expected).
+- `python3` is available:
+  - Verify: `python3 --version`
 
-## Notes / future steps to add
-- Xcode / Command Line Tools
-- Language runtimes (Node, Python, etc.)
-- SSH keys, Git signing, password manager, backups
-- Dotfiles + reproducible setup (Brewfile)
+## Next
+
+- Install `uv` (attempted, not installed yet): [astral-sh/uv](https://github.com/astral-sh/uv)

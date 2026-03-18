@@ -28,12 +28,11 @@ A simple checklist to get a macOS machine ready for development.
   - Verify: `brew --version`
 
 
-## Python 
+## Python
 
-- We install our own Python so we can control versions and avoid relying on whatever ships with macOS: [Python on macOS](https://www.python.org/downloads/macos/)
+- We use Python for development and tooling (scripts, CLIs, automation) and we want control over versions: [Python on macOS](https://www.python.org/downloads/macos/)
 - macOS includes an Apple-provided Python (`/usr/bin/python3`) that some system tools may depend on, so we **don’t modify or replace it**.
-- Instead, we install and manage a separate Python for development (and keep it isolated from the system Python).
-
+- Instead, we install and manage a separate Python for development using `uv` (isolated from the system Python).
 
 ## Python tooling (uv)
 
@@ -45,4 +44,5 @@ A simple checklist to get a macOS machine ready for development.
   - Option A (recommended): `uv tool update-shell` (then restart Terminal)
   - Option B (manual): `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zprofile` (then restart Terminal or run `source ~/.zprofile`)
 - Verify the installed tool runs: `pycowsay "Hello"`
-- List Python versions `uv` can manage/download: `uv python list`
+- Install the latest version of python: `uv python install`
+- Verify the Python you installed is available: `uv python list`

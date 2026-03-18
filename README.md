@@ -11,3 +11,4 @@ After first login on a new MacBook Air M4:
 1. Ran [macOS Software Update](https://support.apple.com/en-ca/108382) to install the latest available macOS updates.
 2. Enrolled in the [Apple Beta Software Program](https://beta.apple.com) to receive beta OS releases.
 3. Enabled [Apple Intelligence](https://www.apple.com/apple-intelligence/).
+4. Installed [Homebrew](https://brew.sh) ([GitHub](https://github.com/homebrew/brew)) for package management.

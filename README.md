@@ -29,16 +29,14 @@ A simple checklist to get a macOS machine ready for development.
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
-## Workspace (done)
+## Python tooling (uv)
 
-- Create a dev folder: `mkdir -p ~/Workspace`
-
-## Python (observed)
-
-- `python` is not available by default on macOS (expected).
-- `python3` is available:
-  - Verify: `python3 --version`
-
-## Next
-
-- Install `uv` (attempted, not installed yet): [astral-sh/uv](https://github.com/astral-sh/uv)
+- Install `uv` with Homebrew: `brew install uv`
+  - Reference: [astral-sh/uv](https://github.com/astral-sh/uv)
+- Confirm it’s installed: `which uv` (should show `/opt/homebrew/bin/uv`)
+- Install a Python CLI tool (example): `uv tool install pycowsay`
+- If `uv` warns that `~/.local/bin` is not on your `PATH`, update your shell so installed tools work:
+  - Option A (recommended): `uv tool update-shell` (then restart Terminal)
+  - Option B (manual): `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zprofile` (then restart Terminal or run `source ~/.zprofile`)
+- Verify the installed tool runs: `pycowsay "Hello"`
+- List Python versions `uv` can manage/download: `uv python list`

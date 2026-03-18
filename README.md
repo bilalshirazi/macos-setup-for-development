@@ -33,10 +33,12 @@ A simple checklist to get a macOS machine ready for development.
 - We install our own Python so we can control versions and avoid relying on whatever ships with macOS: [Python on macOS](https://www.python.org/downloads/macos/)
 - macOS includes an Apple-provided Python (`/usr/bin/python3`) that some system tools may depend on, so we **don’t modify or replace it**.
 - Instead, we install and manage a separate Python for development (and keep it isolated from the system Python).
+
+
 ## Python tooling (uv)
 
 - Install `uv` with Homebrew: `brew install uv`
-  - Reference: [astral-sh/uv](https://github.com/astral-sh/uv)
+  - [Astral](https://astral.sh) · Reference: [astral-sh/uv](https://github.com/astral-sh/uv)
 - Confirm it’s installed: `which uv` (should show `/opt/homebrew/bin/uv`)
 - Install a Python CLI tool (example): `uv tool install pycowsay`
 - If `uv` warns that `~/.local/bin` is not on your `PATH`, update your shell so installed tools work:

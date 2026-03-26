@@ -49,6 +49,15 @@ A simple checklist to get a macOS machine ready for development.
 - Install `ruff` with Homebrew: `brew install ruff`
   - [Astral](https://astral.sh) Reference: [astral-sh/ruff](https://github.com/astral-sh/ruff)
 
+## IDE & Terminal
+
+- Install iTerm2 (a highly customizable replacement for the default macOS Terminal): `brew install --cask iterm2`
+  - Reference: [iTerm2](https://iterm2.com/)
+- Install Visual Studio Code (a powerful, extensible code editor): `brew install --cask visual-studio-code`
+  - Reference: [Visual Studio Code](https://code.visualstudio.com/)
+- Verify you can launch VS Code from the terminal: `code .`
+  - *Note: If the command is not found, open VS Code, press `Cmd+Shift+P`, type "shell command", and select **Shell Command: Install 'code' command in PATH**.*
+
 ## Machine Learning
 
 - Install `hf` with Homebrew: `brew install hf`

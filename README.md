@@ -34,7 +34,7 @@ A simple checklist to get a macOS machine ready for development.
 - macOS includes an Apple-provided Python (`/usr/bin/python3`) that some system tools may depend on, so we **don’t modify or replace it**.
 - Instead, we install and manage a separate Python for development using `uv` (isolated from the system Python).
 
-## Python tooling (uv)
+## Python tooling (uv/ruff)
 
 - Install `uv` with Homebrew: `brew install uv`
   - [Astral](https://astral.sh) · Reference: [astral-sh/uv](https://github.com/astral-sh/uv)
@@ -46,3 +46,4 @@ A simple checklist to get a macOS machine ready for development.
 - Verify the installed tool runs: `pycowsay "Hello"`
 - Install the latest version of python: `uv python install`
 - Verify the Python you installed is available: `uv python list`
+- Install `ruff` with Homebrew: `brew install ruff`

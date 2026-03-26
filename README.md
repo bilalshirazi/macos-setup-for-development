@@ -27,8 +27,6 @@ A simple checklist to get a macOS machine ready for development.
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
-
-
 ## Terminal Customization
 
 - Install Oh My Zsh (a community-driven framework for managing your zsh themes and plugins): 
@@ -75,6 +73,12 @@ A simple checklist to get a macOS machine ready for development.
   - Reference: [Visual Studio Code](https://code.visualstudio.com/)
 - Verify you can launch VS Code from the terminal: `code .`
   - *Note: If the command is not found, open VS Code, press `Cmd+Shift+P`, type "shell command", and select **Shell Command: Install 'code' command in PATH**.*
+
+## Version Control
+
+- Install GitHub CLI (GitHub’s official command line tool): `brew install gh`
+  - Reference: [GitHub CLI](https://cli.github.com/) · [cli/cli](https://github.com/cli/cli)
+- Authenticate the CLI with your GitHub account: `gh auth login`
 
 ## Machine Learning
 

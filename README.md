@@ -27,6 +27,13 @@ A simple checklist to get a macOS machine ready for development.
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
+## Terminal Customization
+
+- Install Oh My Zsh (a community-driven framework for managing your zsh themes and plugins): 
+  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+  - Reference: [Oh My Zsh](https://ohmyz.sh/)
+- *Note: Oh My Zsh will create a new `~/.zshrc` file to manage your terminal's appearance. It will not interfere with the `PATH` variables you already set up in your `~/.zprofile`.*
+- **To uninstall:** If you ever want to revert to the default macOS terminal, simply run `uninstall_oh_my_zsh`.
 
 ## Python
 

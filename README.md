@@ -47,3 +47,14 @@ A simple checklist to get a macOS machine ready for development.
 - Install the latest version of python: `uv python install`
 - Verify the Python you installed is available: `uv python list`
 - Install `ruff` with Homebrew: `brew install ruff`
+  - [Astral](https://astral.sh) Reference: [astral-sh/ruff](https://github.com/astral-sh/ruff)
+
+## Machine Learning
+
+- Install `hf` with Homebrew: `brew install hf`
+  - [Huggingface](https://huggingface.co)
+- Install `mlx-lm` (Apple's framework for running and fine-tuning text-based Large Language Models): `uv tool install mlx-lm`
+  - Reference: [ml-explore/mlx-lm](https://github.com/ml-explore/mlx-lm)
+- Install `mlx-vlm` (for running Vision Language Models and multimodal models): `uv tool install mlx-vlm`
+  - Reference: [Blaizzy/mlx-vlm](https://github.com/Blaizzy/mlx-vlm)
+- Core MLX framework overview: [ml-explore/mlx](https://github.com/ml-explore/mlx)

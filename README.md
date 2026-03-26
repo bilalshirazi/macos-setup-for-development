@@ -27,6 +27,8 @@ A simple checklist to get a macOS machine ready for development.
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
+
+
 ## Terminal Customization
 
 - Install Oh My Zsh (a community-driven framework for managing your zsh themes and plugins): 
@@ -34,6 +36,15 @@ A simple checklist to get a macOS machine ready for development.
   - Reference: [Oh My Zsh](https://ohmyz.sh/)
 - *Note: Oh My Zsh will create a new `~/.zshrc` file to manage your terminal's appearance. It will not interfere with the `PATH` variables you already set up in your `~/.zprofile`.*
 - **To uninstall:** If you ever want to revert to the default macOS terminal, simply run `uninstall_oh_my_zsh`.
+
+## Developer Fonts (Required for Terminal Themes)
+
+- Themes like Oh My Zsh's `agnoster` require a patched Nerd Font to render the prompt arrows and icons correctly.
+- Install Hack Nerd Font via Homebrew: `brew install font-hack-nerd-font`
+  - Reference: [Nerd Fonts](https://www.nerdfonts.com/)
+- **Configuration:**
+  - **Terminal.app:** Go to `Terminal > Settings > Profiles > Text > Font`, click `Change...`, and select `Hack Nerd Font`.
+  - **iTerm2:** Go to `iTerm2 > Settings > Profiles > Text > Font`, and select `Hack Nerd Font`.
 
 ## Python
 

@@ -92,4 +92,6 @@ A simple checklist to get a macOS machine ready for development.
   - Reference: [ml-explore/mlx-lm](https://github.com/ml-explore/mlx-lm)
 - Install `mlx-vlm` (for running Vision Language Models and multimodal models): `uv tool install --with torch --with torchvision mlx-vlm`
   - Reference: [Blaizzy/mlx-vlm](https://github.com/Blaizzy/mlx-vlm)
+- Install `mlx-audio` (for working with audio models on MLX): `uv tool install mlx-audio`
+  - Reference: [ml-explore/mlx](https://github.com/ml-explore/mlx)
 - Core MLX framework overview: [ml-explore/mlx](https://github.com/ml-explore/mlx)

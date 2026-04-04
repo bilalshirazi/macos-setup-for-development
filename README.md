@@ -9,7 +9,7 @@ A simple checklist to get a macOS machine ready for development.
 
 ## Terminal + shell profile
 
-- We’ll be using **Terminal** for most setup steps: [Terminal User Guide](https://support.apple.com/en-ca/guide/terminal/welcome/mac)
+- We’ll be using **Terminal/iTerm** for most setup steps: [Terminal User Guide](https://support.apple.com/en-ca/guide/terminal/welcome/mac)
 - Some installs (e.g. Homebrew) require updating your shell profile so tools are available on your `PATH`. On macOS (zsh), that’s typically `~/.zprofile`.
   - Overview: [Mac startup disk / shell startup files overview](https://support.apple.com/en-ca/102360)
   - View: `cat ~/.zprofile`
@@ -27,6 +27,10 @@ A simple checklist to get a macOS machine ready for development.
   - `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`
   - Verify: `brew --version`
 
+## Containers / Virtualization
+- Install Apple Containers (container): `brew install container`
+  - Reference: https://formulae.brew.sh/formula/container
+  - *note* softwareupdate --install-rosetta --agree-to-license   
 ## Terminal Customization
 
 - Install Oh My Zsh (a community-driven framework for managing your zsh themes and plugins): 

@@ -6,8 +6,8 @@ A simple checklist to get a macOS machine ready for development.
 
 - Complete macOS Setup Assistant and create a local user: [Create a user account on Mac](https://support.apple.com/en-ca/guide/mac-help/mh15191/mac)
 - Install all available macOS updates: [Update macOS on Mac](https://support.apple.com/108382)
-- Enable FileVault (disk encryption), since this machine will hold SSH keys, signing keys, and API tokens: [Turn on FileVault](https://support.apple.com/en-us/108837)
-- Enable the built-in firewall: [Turn on the firewall on Mac](https://support.apple.com/en-us/102437)
+- Enable FileVault (disk encryption), since this machine will hold SSH keys, signing keys, and API tokens: [Turn on FileVault](https://support.apple.com/en-ca/guide/mac-help/mh11785/mac)
+- Enable the built-in firewall: [Turn on the firewall on Mac](https://support.apple.com/en-ca/guide/mac-help/mh34041/mac)
 
 ## Terminal + shell profile
 
